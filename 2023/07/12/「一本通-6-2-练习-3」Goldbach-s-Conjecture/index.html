@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>素数筛法 | 流水源</title>
-  <meta name="keywords" content=" mfsteam ">
-  <meta name="description" content="素数筛法 | 流水源">
+  <title>「一本通 6.2 练习 3」Goldbach&#39;s Conjecture | 流水源</title>
+  <meta name="keywords" content=" 答案 ">
+  <meta name="description" content="「一本通 6.2 练习 3」Goldbach&#39;s Conjecture | 流水源">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940#include&lt;bits&#x2F;stdc++.h&gt;using namespace std;const int N &#x3D; 1e9 + 7;int pr[N &#x2F; 5], ct;bool isP[N];int ass() &amp;#123;    isP[1] &#x3D;">
 <meta property="og:type" content="article">
@@ -396,21 +396,21 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-素数筛法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-「一本通-6-2-练习-3」Goldbach-s-Conjecture" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">素数筛法</h1>
+        <h1 class="article-title">「一本通 6.2 练习 3」Goldbach&#39;s Conjecture</h1>
     
     <div class="article-meta">
         
         
-        <span class="author"><a>小助手</a></span>
+        <span class="author"><a>xzbzm</a></span>
         
         
         <span class="book">
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="mfsteam">mfsteam</a>
+            <a  data-rel="沐枫sun1330">沐枫sun1330</a>
             
         </span>
         
@@ -418,14 +418,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">mfsteam</a>
+            <a class="color3">答案</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-07-12 15:31:25'>2023-07-12 15:21</time>
+            Created At : <time class="date" title='Updated At: 2023-07-12 20:50:30'>2023-07-12 20:48</time>
         
     </div>
     <div class="article-meta">
@@ -447,7 +447,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA-1e5-7-%E4%BB%A5%E5%86%85%E7%9A%84%E6%89%80%E6%9C%89%E7%B4%A0%E6%95%B0"><span class="toc-text">输出 1e5+7 以内的所有素数</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -463,20 +463,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="输出-1e5-7-以内的所有素数"><a href="#输出-1e5-7-以内的所有素数" class="headerlink" title="输出 1e5+7 以内的所有素数"></a>输出 1e5+7 以内的所有素数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">isP</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (x&lt;<span class="number">2</span> || (x&gt;<span class="number">2</span> &amp;&amp; x%<span class="number">2</span>==<span class="number">0</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">3</span>; i*i &lt;= x; i += <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">clock_t</span> start, end;</span><br><span class="line">    start = clock();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; ++i)</span><br><span class="line">        <span class="keyword">if</span> (isP(i)) <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, i);</span><br><span class="line">    end = clock();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;time: %d\n&quot;</span>, end-start);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 1e9 + 7;</span><br><span class="line">int pr[N / 5], ct;</span><br><span class="line">bool isP[N];</span><br><span class="line">int ass() &#123;</span><br><span class="line">    isP[1] = true, isP[0] = true;</span><br><span class="line">    for (int i = 2; i &lt; 1e5 + 1; ++i) &#123;</span><br><span class="line">        if (isP[i]) continue;</span><br><span class="line">        pr[++ct] = i;</span><br><span class="line">        for (int j = i + i; j &lt; 1e5 + 1; j += i)</span><br><span class="line">            isP[j] = true;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    ass();</span><br><span class="line"></span><br><span class="line">    while (1 + 1 == 2) &#123;</span><br><span class="line">        int x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        if (x == 0) break;</span><br><span class="line">        if (x == 1 || x == 2 || x % 2 != 0) &#123;</span><br><span class="line">            cout &lt;&lt; &quot;Goldbach&#x27;s conjecture is wrong.\n&quot;;</span><br><span class="line">            continue;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        bool s = 0;</span><br><span class="line">        for (int i = 3; i &lt;= x; i++) &#123;</span><br><span class="line">            if (!isP[i] &amp;&amp; !isP[x - i]) &#123;</span><br><span class="line">                cout &lt;&lt; x &lt;&lt; &quot; = &quot; &lt;&lt; i &lt;&lt; &quot; + &quot; &lt;&lt; x - i &lt;&lt; endl; s = 1;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        if (s == 0) &#123;</span><br><span class="line">            cout &lt;&lt; &quot;Goldbach&#x27;s conjecture is wrong.\n&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Copy<br>埃氏筛</p>
-<hr>
-<p>除了能够检验给定整数 𝑥 是否为素数的函数之外，如果能够事先准备好素数表就可以帮助我们更有效地求解素数的相关问题。埃拉托色尼筛选法（Sieve of Eratosthenes）可以快速列举出给定范围内的所有素数。</p>
-<p><img src="https://www.mfstem.org/file/2/%E5%9F%83%E6%B0%8F%E7%AD%9B.gif"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line">   <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">   using namespace <span class="built_in">std</span>;</span><br><span class="line">   <span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line">   <span class="type">int</span> pr[N/<span class="number">5</span>], ct;</span><br><span class="line">   <span class="type">bool</span> isP[N];<span class="comment">// true表示不是素数</span></span><br><span class="line">   <span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="type">clock_t</span> start, end;</span><br><span class="line">       start = clock();</span><br><span class="line">       isP[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; ++i) &#123;</span><br><span class="line">           <span class="keyword">if</span> (isP[i]) <span class="keyword">continue</span>;</span><br><span class="line">           pr[++ct] = i;</span><br><span class="line">           <span class="keyword">for</span> (<span class="type">int</span> j = i+i; j &lt; N; j += i)</span><br><span class="line">               isP[j] = <span class="literal">true</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       end = clock();</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">&quot;time: %d\n&quot;</span>, end-start);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-<p>欧拉筛(线性筛)</p>
-<hr>
-<p>埃氏筛有一个缺点，每个数会被筛多次。</p>
-<p>可以考虑将每个数都只用它最小的质因数筛掉，例如：8 被 2×4 筛掉，27 被 3×9 筛掉，……。</p>
-<p>由此我们设计出欧拉筛的算法：<strong>用每个数 x（不论是否是素数）从最小的质数开始逐一相乘，将乘积得数筛去，直到该素数为 x 的最小质因数为止。</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">7</span>;</span><br><span class="line"> <span class="type">int</span> pr[N/<span class="number">5</span>], ct; </span><br><span class="line">isP[N];<span class="comment">// true表示不是素数 </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123; <span class="type">clock_t</span> start, end; start = <span class="built_in">clock</span>(); isP[<span class="number">1</span>] = <span class="literal">true</span>; <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; ++i) &#123; <span class="keyword">if</span> (!isP[i]) pr[++ct] = i; <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j&lt;=ct &amp;&amp; <span class="number">1LL</span>*pr[j]*i&lt;N; ++j) &#123; isP[pr[j]*i] = <span class="literal">true</span>; <span class="keyword">if</span> (i%pr[j] == <span class="number">0</span>) <span class="keyword">break</span>; &#125; &#125; end = <span class="built_in">clock</span>(); <span class="built_in">printf</span>(<span class="string">&quot;time: %d\n&quot;</span>, end-start); &#125;</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 smf08607@outlook.com </span>

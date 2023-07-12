@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-12T07:40:11.078Z</updated>
+  <updated>2023-07-12T12:50:30.895Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「一本通 6.2 练习 3」Goldbach&#39;s Conjecture</title>
+    <link href="https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/"/>
+    <id>https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/</id>
+    <published>2023-07-12T12:48:17.000Z</published>
+    <updated>2023-07-12T12:50:30.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="沐枫sun1330" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%ABsun1330/"/>
+    
+    
+    <category term="答案" scheme="https://xzmfhome.github.io/tags/%E7%AD%94%E6%A1%88/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建 hexo</title>

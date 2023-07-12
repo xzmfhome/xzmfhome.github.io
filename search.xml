@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>「一本通 6.2 练习 3」Goldbach&#39;s Conjecture</title>
+      <link href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/"/>
+      <url>/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 1e9 + 7;</span><br><span class="line">int pr[N / 5], ct;</span><br><span class="line">bool isP[N];</span><br><span class="line">int ass() &#123;</span><br><span class="line">    isP[1] = true, isP[0] = true;</span><br><span class="line">    for (int i = 2; i &lt; 1e5 + 1; ++i) &#123;</span><br><span class="line">        if (isP[i]) continue;</span><br><span class="line">        pr[++ct] = i;</span><br><span class="line">        for (int j = i + i; j &lt; 1e5 + 1; j += i)</span><br><span class="line">            isP[j] = true;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">    ass();</span><br><span class="line"></span><br><span class="line">    while (1 + 1 == 2) &#123;</span><br><span class="line">        int x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        if (x == 0) break;</span><br><span class="line">        if (x == 1 || x == 2 || x % 2 != 0) &#123;</span><br><span class="line">            cout &lt;&lt; &quot;Goldbach&#x27;s conjecture is wrong.\n&quot;;</span><br><span class="line">            continue;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        bool s = 0;</span><br><span class="line">        for (int i = 3; i &lt;= x; i++) &#123;</span><br><span class="line">            if (!isP[i] &amp;&amp; !isP[x - i]) &#123;</span><br><span class="line">                cout &lt;&lt; x &lt;&lt; &quot; = &quot; &lt;&lt; i &lt;&lt; &quot; + &quot; &lt;&lt; x - i &lt;&lt; endl; s = 1;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        if (s == 0) &#123;</span><br><span class="line">            cout &lt;&lt; &quot;Goldbach&#x27;s conjecture is wrong.\n&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 沐枫sun1330 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 答案 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建 hexo</title>
       <link href="/2023/07/12/forza-horizon-4-1/"/>
       <url>/2023/07/12/forza-horizon-4-1/</url>
