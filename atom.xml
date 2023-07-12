@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-12T07:31:25.056Z</updated>
+  <updated>2023-07-12T07:40:11.078Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建 hexo</title>
+    <link href="https://xzmfhome.github.io/2023/07/12/forza-horizon-4-1/"/>
+    <id>https://xzmfhome.github.io/2023/07/12/forza-horizon-4-1/</id>
+    <published>2023-07-12T07:37:05.000Z</published>
+    <updated>2023-07-12T07:40:11.078Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo-3-hexo-github&quot;&gt;&lt;a href=&quot;#hexo-3-hexo-github&quot; class=&quot;headerlink&quot; title=&quot;hexo+ 3-hexo + github&quot;&gt;&lt;/a&gt;hexo+ 3-hexo +</summary>
+        
+      
+    
+    
+    
+    <category term="日记" scheme="https://xzmfhome.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://xzmfhome.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>素数筛法</title>
