@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-12T04:26:02.484Z</updated>
+  <updated>2023-07-12T06:18:42.841Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数</title>
+    <link href="https://xzmfhome.github.io/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    <id>https://xzmfhome.github.io/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/</id>
+    <published>2023-07-12T05:58:08.000Z</published>
+    <updated>2023-07-12T06:18:42.841Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="沐枫sun1330" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%ABsun1330/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>入门-搜索、贪心和动态规划的区别与联系</title>
