@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-12T03:28:17.749Z</updated>
+  <updated>2023-07-12T04:26:02.484Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>入门-搜索、贪心和动态规划的区别与联系</title>
+    <link href="https://xzmfhome.github.io/2023/07/12/%E5%85%A5%E9%97%A8-%E6%90%9C%E7%B4%A2%E3%80%81%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/"/>
+    <id>https://xzmfhome.github.io/2023/07/12/%E5%85%A5%E9%97%A8-%E6%90%9C%E7%B4%A2%E3%80%81%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</id>
+    <published>2023-07-12T04:22:21.000Z</published>
+    <updated>2023-07-12T04:26:02.484Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大&quot;&gt;&lt;a href=&quot;#有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-飞花" scheme="https://xzmfhome.github.io/categories/%E9%A3%9E%E8%8A%B1/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>「一本通 6.1 例 1」序列的第 k 个数</title>
