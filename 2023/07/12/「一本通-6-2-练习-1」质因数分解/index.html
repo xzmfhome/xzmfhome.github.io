@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>「一本通 6.2 练习 1」质因数分解 | 流水源</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="「一本通 6.2 练习 1」质因数分解 | 流水源">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="题目描述原题来自：NOIP 2012 普及组 已知正整数 n 是两个不同的质数的乘积，试求出较大的那个质数。输入格式  输入只有一行，包含一个正整数 n。输出格式  输出只有一行，包含一个正整数 p，即较大的那个质数。样例输入数据 121  输出数据 17  数据范围与提示对于 30% 的数据，n≤1000；对于全部数据，6≤n≤2×109。 答案: 123456789101112131415#i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「一本通 6.2 练习 1」质因数分解">
+<meta property="og:url" content="https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-1%E3%80%8D%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/index.html">
+<meta property="og:site_name" content="流水源">
+<meta property="og:description" content="题目描述原题来自：NOIP 2012 普及组 已知正整数 n 是两个不同的质数的乘积，试求出较大的那个质数。输入格式  输入只有一行，包含一个正整数 n。输出格式  输出只有一行，包含一个正整数 p，即较大的那个质数。样例输入数据 121  输出数据 17  数据范围与提示对于 30% 的数据，n≤1000；对于全部数据，6≤n≤2×109。 答案: 123456789101112131415#i">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-12T07:07:16.000Z">
+<meta property="article:modified_time" content="2023-07-12T07:09:49.518Z">
+<meta property="article:author" content="xzbzm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="流水源" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>xzbzm</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/smf08607"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:smf08607@outlook.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=106675641&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(4)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="沐枫答案">
+            
+            沐枫答案
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="-飞花">
+            
+            -飞花
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="沐枫sun1330">
+            
+            沐枫sun1330
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://www.mfstem.org/">mfoj</a></li>
+            
+            <li><a target="_blank" href="https://qnlsix.github.io/">mf导航</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="All 沐枫答案 "
+           href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-1%E3%80%8D%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/"
+           data-tag=""
+           data-author="小助手" >
+            <span class="post-title" title="「一本通 6.2 练习 1」质因数分解">「一本通 6.2 练习 1」质因数分解</span>
+            <span class="post-date" title="2023-07-12 15:07:16">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="All 沐枫sun1330 "
+           href="/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/"
+           data-tag=""
+           data-author="小助手" >
+            <span class="post-title" title="快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数">快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数</span>
+            <span class="post-date" title="2023-07-12 13:58:08">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="All -飞花 "
+           href="/2023/07/12/%E5%85%A5%E9%97%A8-%E6%90%9C%E7%B4%A2%E3%80%81%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="入门-搜索、贪心和动态规划的区别与联系">入门-搜索、贪心和动态规划的区别与联系</span>
+            <span class="post-date" title="2023-07-12 12:22:21">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="All 沐枫答案 "
+           href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-1-%E4%BE%8B-1%E3%80%8D%E5%BA%8F%E5%88%97%E7%9A%84%E7%AC%AC-k-%E4%B8%AA%E6%95%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="「一本通 6.1 例 1」序列的第 k 个数">「一本通 6.1 例 1」序列的第 k 个数</span>
+            <span class="post-date" title="2023-07-12 11:24:49">2023/07/12</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-「一本通-6-2-练习-1」质因数分解" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">「一本通 6.2 练习 1」质因数分解</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>小助手</a></span>
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="沐枫答案">沐枫答案</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2023-07-12 15:09:49'>2023-07-12 15:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E5%8F%AA%E6%9C%89%E4%B8%80%E8%A1%8C%EF%BC%8C%E5%8C%85%E5%90%AB%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0-p%EF%BC%8C%E5%8D%B3%E8%BE%83%E5%A4%A7%E7%9A%84%E9%82%A3%E4%B8%AA%E8%B4%A8%E6%95%B0%E3%80%82%E6%A0%B7%E4%BE%8B"><span class="toc-text">输出只有一行，包含一个正整数 p，即较大的那个质数。样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE-1"><span class="toc-text">输入数据 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE-1"><span class="toc-text">输出数据 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%E4%B8%8E%E6%8F%90%E7%A4%BA"><span class="toc-text">数据范围与提示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%94%E6%A1%88"><span class="toc-text">答案</span></a>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><strong>原题来自：NOIP 2012 普及组</strong></p>
+<p>已知正整数 n 是两个不同的质数的乘积，试求出较大的那个质数。<br>输入格式</p>
+<hr>
+<p>输入只有一行，包含一个正整数 n。<br>输出格式</p>
+<hr>
+<h2 id="输出只有一行，包含一个正整数-p，即较大的那个质数。样例"><a href="#输出只有一行，包含一个正整数-p，即较大的那个质数。样例" class="headerlink" title="输出只有一行，包含一个正整数 p，即较大的那个质数。样例"></a>输出只有一行，包含一个正整数 p，即较大的那个质数。<br>样例</h2><h2 id="输入数据-1"><a href="#输入数据-1" class="headerlink" title="输入数据 1"></a>输入数据 1</h2><pre><code>21
+</code></pre>
+<h2 id="输出数据-1"><a href="#输出数据-1" class="headerlink" title="输出数据 1"></a>输出数据 1</h2><pre><code>7
+</code></pre>
+<h2 id="数据范围与提示"><a href="#数据范围与提示" class="headerlink" title="数据范围与提示"></a>数据范围与提示</h2><p>对于 30% 的数据，n≤1000；<br>对于全部数据，6≤n≤2×109。</p>
+<p>答案:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">as</span><span class="params">(<span class="type">long</span> <span class="type">long</span> a)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a); i++) &#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (a % i == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> a/i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> a;</span><br><span class="line">	cin &gt;&gt; a;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">as</span>(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 smf08607@outlook.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2023 xzbzm
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
