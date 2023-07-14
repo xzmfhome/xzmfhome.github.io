@@ -45,7 +45,7 @@
     <link href="https://xzmfhome.github.io/2023/07/13/%E5%A5%BD%E7%8E%A9%E7%9A%84%E8%B5%84%E6%96%99/"/>
     <id>https://xzmfhome.github.io/2023/07/13/%E5%A5%BD%E7%8E%A9%E7%9A%84%E8%B5%84%E6%96%99/</id>
     <published>2023-07-13T05:26:25.000Z</published>
-    <updated>2023-07-13T05:43:51.303Z</updated>
+    <updated>2023-07-14T07:27:54.139Z</updated>
     
     
       
@@ -126,14 +126,14 @@ int ass() &amp;#123;
     <link href="https://xzmfhome.github.io/2023/07/12/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/"/>
     <id>https://xzmfhome.github.io/2023/07/12/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/</id>
     <published>2023-07-12T07:21:15.000Z</published>
-    <updated>2023-07-12T07:31:25.056Z</updated>
+    <updated>2023-07-14T07:28:34.305Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;输出-1e5-7-以内的所有素数&quot;&gt;&lt;a href=&quot;#输出-1e5-7-以内的所有素数&quot; class=&quot;headerlink&quot; title=&quot;输出 1e5+7 以内的所有素数&quot;&gt;&lt;/a&gt;输出 1e5+7 以内的所有素数&lt;/h2&gt;&lt;figure</summary>
+    <summary type="html">&lt;h2 id=&quot;输出-1e5-7-以内的所有素数&quot;&gt;&lt;a href=&quot;#输出-1e5-7-以内的所有素数&quot; class=&quot;headerlink&quot; title=&quot;输出 1e5+7 以内的所有素数-&quot;&gt;&lt;/a&gt;输出 1e5+7 以内的所有素数-&lt;/h2&gt;&lt;pre class=&quot;</summary>
         
       
     
@@ -176,14 +176,18 @@ int ass() &amp;#123;
     <link href="https://xzmfhome.github.io/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
     <id>https://xzmfhome.github.io/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/</id>
     <published>2023-07-12T05:58:08.000Z</published>
-    <updated>2023-07-12T06:33:35.792Z</updated>
+    <updated>2023-07-14T07:28:24.466Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;pre class=&quot; language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+long long as(long long a,int p) &amp;#123;
+</summary>
         
       
     
