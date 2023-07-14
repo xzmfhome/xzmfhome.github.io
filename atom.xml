@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-13T05:43:51.303Z</updated>
+  <updated>2023-07-14T07:24:13.492Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「一本通 6.2 练习 4」Sherlock and His Girlfriend</title>
+    <link href="https://xzmfhome.github.io/2023/07/14/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-4%E3%80%8DSherlock-and-His-Girlfriend/"/>
+    <id>https://xzmfhome.github.io/2023/07/14/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-4%E3%80%8DSherlock-and-His-Girlfriend/</id>
+    <published>2023-07-14T07:17:25.000Z</published>
+    <updated>2023-07-14T07:24:13.492Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;部分截图&lt;/p&gt;
+&lt;p&gt;  &lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="沐枫答案 一本通" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%AB%E7%AD%94%E6%A1%88-%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>好玩的资料</title>
@@ -46,14 +70,20 @@
     <link href="https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/"/>
     <id>https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/</id>
     <published>2023-07-12T12:48:17.000Z</published>
-    <updated>2023-07-12T12:50:30.895Z</updated>
+    <updated>2023-07-14T07:18:48.909Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;pre&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+const int N = 1e9 + 7;
+int pr[N / 5], ct;
+bool isP[N];
+int ass() &amp;#123;
+   </summary>
         
       
     
@@ -121,7 +151,7 @@
     <link href="https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-1%E3%80%8D%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/"/>
     <id>https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-1%E3%80%8D%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/</id>
     <published>2023-07-12T07:07:16.000Z</published>
-    <updated>2023-07-12T07:20:32.895Z</updated>
+    <updated>2023-07-14T07:20:52.059Z</updated>
     
     
       
@@ -134,8 +164,10 @@
     
     
     
-    <category term="沐枫答案" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%AB%E7%AD%94%E6%A1%88/"/>
+    <category term="沐枫答案 一本通" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%AB%E7%AD%94%E6%A1%88-%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
     
+    
+    <category term="一本通" scheme="https://xzmfhome.github.io/tags/%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
     
   </entry>
   
@@ -190,20 +222,22 @@
     <link href="https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-1-%E4%BE%8B-1%E3%80%8D%E5%BA%8F%E5%88%97%E7%9A%84%E7%AC%AC-k-%E4%B8%AA%E6%95%B0/"/>
     <id>https://xzmfhome.github.io/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-1-%E4%BE%8B-1%E3%80%8D%E5%BA%8F%E5%88%97%E7%9A%84%E7%AC%AC-k-%E4%B8%AA%E6%95%B0/</id>
     <published>2023-07-12T03:24:49.000Z</published>
-    <updated>2023-07-12T03:28:17.749Z</updated>
+    <updated>2023-07-14T07:20:50.215Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;BSNY-在学等差数列和等比数列，当已知前三项时，就可以知道是等差数列还是等比数列。现在给你序列的前三项，这个序列要么是等差序列，要么是等比序列，你能求出第-k-项的值吗。-如果第-k-项的值太大，对-200907-取模。输入格式&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;BSNY 在学等差数列和等比数列，当已知前三项时，就可以知道是等差数列还是等比数列。现在给你序列的前三项，这个序列要么是等差序列，要么是等比序列，你能求出第 k 项的值吗。 如果第 k 项的值太大，对 200907 取模。&lt;br&gt;输入格式&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4</summary>
         
       
     
     
     
-    <category term="沐枫答案" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%AB%E7%AD%94%E6%A1%88/"/>
+    <category term="沐枫答案 一本通" scheme="https://xzmfhome.github.io/categories/%E6%B2%90%E6%9E%AB%E7%AD%94%E6%A1%88-%E4%B8%80%E6%9C%AC%E9%80%9A/"/>
     
     
   </entry>
