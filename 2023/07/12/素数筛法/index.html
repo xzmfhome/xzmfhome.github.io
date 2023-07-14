@@ -471,7 +471,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-07-14 21:41:20'>2023-07-12 15:21</time>
+            发布时间 : <time class="date" title='最后更新: 2023-07-14 21:44:04'>2023-07-12 15:21</time>
         
     </div>
     <div class="article-meta">
@@ -532,27 +532,27 @@ int main() &#123;
 <hr>
 <p>除了能够检验给定整数 𝑥 是否为素数的函数之外，如果能够事先准备好素数表就可以帮助我们更有效地求解素数的相关问题。埃拉托色尼筛选法（Sieve of Eratosthenes）可以快速列举出给定范围内的所有素数。</p>
 <p><img src="https://www.mfstem.org/file/2/%E5%9F%83%E6%B0%8F%E7%AD%9B.gif"></p>
-<pre class=" language-c"><code class="language-c">
+<pre><code>
 
- <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-    <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;ctime></span></span>
-    using namespace std<span class="token punctuation">;</span>
-    <span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1e5</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> pr<span class="token punctuation">[</span>N<span class="token operator">/</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> ct<span class="token punctuation">;</span>
-    bool isP<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// true表示不是素数</span>
-    <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        clock_t start<span class="token punctuation">,</span> end<span class="token punctuation">;</span>
-        start <span class="token operator">=</span> <span class="token function">clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        isP<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> true<span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>isP<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
-            pr<span class="token punctuation">[</span><span class="token operator">++</span>ct<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">+</span>i<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> j <span class="token operator">+</span><span class="token operator">=</span> i<span class="token punctuation">)</span>
-                isP<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> true<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        end <span class="token operator">=</span> <span class="token function">clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"time: %d\n"</span><span class="token punctuation">,</span> end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+ #include &lt;iostream&gt;
+    #include &lt;ctime&gt;
+    using namespace std;
+    const int N = 1e5 + 7;
+    int pr[N/5], ct;
+    bool isP[N];// true表示不是素数
+    int main() &#123;
+        clock_t start, end;
+        start = clock();
+        isP[1] = true;
+        for (int i = 2; i &lt; N; ++i) &#123;
+            if (isP[i]) continue;
+            pr[++ct] = i;
+            for (int j = i+i; j &lt; N; j += i)
+                isP[j] = true;
+        &#125;
+        end = clock();
+        printf(&quot;time: %d\n&quot;, end-start);
+    &#125;
 </code></pre>
 <p>欧拉筛(线性筛)</p>
 <hr>
