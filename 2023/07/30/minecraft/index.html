@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>素数筛法 | 流水源</title>
-  <meta name="keywords" content=" mfsteam ">
-  <meta name="description" content="素数筛法 | 流水源">
+  <title>minecraft | 流水源</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="minecraft | 流水源">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Free Minecraft premium account upgrade https:&#x2F;&#x2F;freeminecraftgiftcode.net">
 <meta property="og:type" content="article">
@@ -482,41 +482,24 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-素数筛法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-minecraft" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">素数筛法</h1>
+        <h1 class="article-title">minecraft</h1>
     
     <div class="article-meta">
         
         
-        <span class="author"><a>小助手</a></span>
         
-        
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="mfsteam">mfsteam</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color3">mfsteam</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-07-14 21:48:44'>2023-07-12 15:21</time>
+            Created At : <time class="date" title='Updated At: 2023-07-30 13:20:16'>2023-07-30 13:19</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:478</span>
+        <span>Count:8</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -535,7 +518,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA-1e5-7-%E4%BB%A5%E5%86%85%E7%9A%84%E6%89%80%E6%9C%89%E7%B4%A0%E6%95%B0"><span class="toc-text">输出 1e5+7 以内的所有素数</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -551,64 +534,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="输出-1e5-7-以内的所有素数"><a href="#输出-1e5-7-以内的所有素数" class="headerlink" title="输出 1e5+7 以内的所有素数"></a>输出 1e5+7 以内的所有素数</h2><pre><code>#include &lt;iostream&gt;
-#include &lt;ctime&gt;
-using namespace std;
-const int N = 1e5 + 7;
-bool isP(int x) &#123;
-    if (x&lt;2 || (x&gt;2 &amp;&amp; x%2==0)) return false;
-    for (int i = 3; i*i &lt;= x; i += 2)
-        if (x % i == 0) return false;
-    return true;
-&#125;
-int main() &#123;
-    clock_t start, end;
-    start = clock();
-    for (int i = 2; i &lt; N; ++i)
-        if (isP(i)) printf(&quot;%d &quot;, i);
-    end = clock();
-    printf(&quot;time: %d\n&quot;, end-start);
-&#125;
-</code></pre>
-<p>埃氏筛</p>
-<hr>
-<p>除了能够检验给定整数 𝑥 是否为素数的函数之外，如果能够事先准备好素数表就可以帮助我们更有效地求解素数的相关问题。埃拉托色尼筛选法（Sieve of Eratosthenes）可以快速列举出给定范围内的所有素数。</p>
-<p><img src="https://www.mfstem.org/file/2/%E5%9F%83%E6%B0%8F%E7%AD%9B.gif"></p>
-<pre><code>
-
- #include &lt;iostream&gt;
-    #include &lt;ctime&gt;
-    using namespace std;
-    const int N = 1e5 + 7;
-    int pr[N/5], ct;
-    bool isP[N];// true表示不是素数
-    int main() &#123;
-        clock_t start, end;
-        start = clock();
-        isP[1] = true;
-        for (int i = 2; i &lt; N; ++i) &#123;
-            if (isP[i]) continue;
-            pr[++ct] = i;
-            for (int j = i+i; j &lt; N; j += i)
-                isP[j] = true;
-        &#125;
-        end = clock();
-        printf(&quot;time: %d\n&quot;, end-start);
-    &#125;
-</code></pre>
-<p>欧拉筛(线性筛)</p>
-<hr>
-<p>埃氏筛有一个缺点，每个数会被筛多次。</p>
-<p>可以考虑将每个数都只用它最小的质因数筛掉，例如：8 被 2×4 筛掉，27 被 3×9 筛掉，……。</p>
-<p>由此我们设计出欧拉筛的算法：<strong>用每个数 x（不论是否是素数）从最小的质数开始逐一相乘，将乘积得数筛去，直到该素数为 x 的最小质因数为止。</strong></p>
-<pre><code>#include &lt;iostream&gt; 
-#include &lt;ctime&gt; 
-using namespace std; 
-const int N = 1e5 + 7;
- int pr[N/5], ct; 
-isP[N];// true表示不是素数 
-int main() &#123; clock_t start, end; start = clock(); isP[1] = true; for (int i = 2; i &lt; N; ++i) &#123; if (!isP[i]) pr[++ct] = i; for (int j = 1; j&lt;=ct &amp;&amp; 1LL*pr[j]*i&lt;N; ++j) &#123; isP[pr[j]*i] = true; if (i%pr[j] == 0) break; &#125; &#125; end = clock(); printf(&quot;time: %d\n&quot;, end-start); &#125;
-</code></pre>
+        <p>Free Minecraft premium account upgrade <a target="_blank" rel="noopener" href="https://freeminecraftgiftcode.net/">https://freeminecraftgiftcode.net</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 smf08607@outlook.com </span>
