@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>打包(pack)--官方std.cpp</title>
+      <link href="/2023/08/06/%E6%89%93%E5%8C%85pack/"/>
+      <url>/2023/08/06/%E6%89%93%E5%8C%85pack/</url>
+      
+        <content type="html"><![CDATA[<pre><code>#include &lt;iostream&gt;using namespace std;const int N = 387;int f[N][N];int main() &#123;    int G, V, n;    scanf(&quot;%d%d%d&quot;, &amp;G, &amp;V, &amp;n);    for (int i = 1, p, g, v; i &lt;= n; i++) &#123;        scanf(&quot;%d%d%d&quot;, &amp;p, &amp;g, &amp;v);        for (int j = G; j &gt;= g; --j)            for (int k = V; k &gt;= v; --k)                 f[j][k] = max(f[j][k], f[j-g][k-v] + p);    &#125;    printf(&quot;%d&quot;, f[G][V]);    return 0;&#125;</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Free Minecraft premium account upgrade https://freeminecraftgiftcode.net</title>
       <link href="/2023/07/30/minecraft/"/>
       <url>/2023/07/30/minecraft/</url>

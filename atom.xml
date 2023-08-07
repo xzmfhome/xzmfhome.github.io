@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-07-30T05:24:05.240Z</updated>
+  <updated>2023-08-07T01:19:40.842Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打包(pack)--官方std.cpp</title>
+    <link href="https://xzmfhome.github.io/2023/08/06/%E6%89%93%E5%8C%85pack/"/>
+    <id>https://xzmfhome.github.io/2023/08/06/%E6%89%93%E5%8C%85pack/</id>
+    <published>2023-08-06T13:40:13.000Z</published>
+    <updated>2023-08-07T01:19:40.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+using namespace std;
+const int N = 387;
+int f[N][N];
+int main() &amp;#123;
+    int G, V, n;
+   </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Free Minecraft premium account upgrade https://freeminecraftgiftcode.net</title>
