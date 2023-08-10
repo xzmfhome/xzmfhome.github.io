@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-08-07T01:19:40.842Z</updated>
+  <updated>2023-08-08T12:29:56.087Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows9</title>
+    <link href="https://xzmfhome.github.io/2023/08/08/windows9/"/>
+    <id>https://xzmfhome.github.io/2023/08/08/windows9/</id>
+    <published>2023-08-08T12:29:56.000Z</published>
+    <updated>2023-08-08T12:29:56.087Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>打包(pack)--官方std.cpp</title>

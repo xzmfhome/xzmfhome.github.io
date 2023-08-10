@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>「一本通 6.2 练习 1」质因数分解 | 流水源</title>
-  <meta name="keywords" content=" 一本通 ">
-  <meta name="description" content="「一本通 6.2 练习 1」质因数分解 | 流水源">
+  <title>windows9 | 流水源</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="windows9 | 流水源">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows9">
@@ -498,41 +498,24 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-「一本通-6-2-练习-1」质因数分解" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-windows9" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">「一本通 6.2 练习 1」质因数分解</h1>
+        <h1 class="article-title">windows9</h1>
     
     <div class="article-meta">
         
         
-        <span class="author"><a>小助手</a></span>
         
-        
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="沐枫答案 一本通">沐枫答案 一本通</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color4">一本通</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-07-14 15:20:52'>2023-07-12 15:07</time>
+            Created At : <time class="date" title='Updated At: 2023-08-08 20:29:56'>2023-08-08 20:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:145</span>
+        <span>Count:0</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -551,7 +534,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E5%8F%AA%E6%9C%89%E4%B8%80%E8%A1%8C%EF%BC%8C%E5%8C%85%E5%90%AB%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0-p%EF%BC%8C%E5%8D%B3%E8%BE%83%E5%A4%A7%E7%9A%84%E9%82%A3%E4%B8%AA%E8%B4%A8%E6%95%B0%E3%80%82%E6%A0%B7%E4%BE%8B"><span class="toc-text">输出只有一行，包含一个正整数 p，即较大的那个质数。样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE-1"><span class="toc-text">输出数据 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%E4%B8%8E%E6%8F%90%E7%A4%BA"><span class="toc-text">数据范围与提示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%94%E6%A1%88"><span class="toc-text">答案</span></a>
+        
     
 <style>
     .left-col .switch-btn,
@@ -567,36 +550,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><strong>原题来自：NOIP 2012 普及组</strong></p>
-<p>已知正整数 n 是两个不同的质数的乘积，试求出较大的那个质数。<br>输入格式</p>
-<hr>
-<p>输入只有一行，包含一个正整数 n。<br>输出格式</p>
-<hr>
-<h2 id="输出只有一行，包含一个正整数-p，即较大的那个质数。样例"><a href="#输出只有一行，包含一个正整数-p，即较大的那个质数。样例" class="headerlink" title="输出只有一行，包含一个正整数 p，即较大的那个质数。样例"></a>输出只有一行，包含一个正整数 p，即较大的那个质数。<br>样例</h2><p>输入数据 1</p>
-<hr>
-<pre><code>21
-</code></pre>
-<h2 id="输出数据-1"><a href="#输出数据-1" class="headerlink" title="输出数据 1"></a>输出数据 1</h2><pre><code>7
-</code></pre>
-<h2 id="数据范围与提示"><a href="#数据范围与提示" class="headerlink" title="数据范围与提示"></a>数据范围与提示</h2><p>对于 30% 的数据，n≤1000；<br>对于全部数据，6≤n≤2×109。</p>
-<p>答案:</p>
-<pre class=" language-c++"><code class="language-c++">#include<bits/stdc++.h>
-using namespace std;
-long long as(long long a) &#123;
-    for (int i = 2; i <= sqrt(a); i++) &#123;
-
-        if (a % i == 0) &#123;
-            return a/i;
-        &#125;
-    &#125;
-&#125;
-int main() &#123;
-    long long a;
-    cin >> a;
-    cout << as(a);
-&#125;
-</code></pre>
-<h1 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h1>
+        
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 smf08607@outlook.com </span>
     </div>
