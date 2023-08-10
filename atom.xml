@@ -6,7 +6,7 @@
   <link href="https://xzmfhome.github.io/atom.xml" rel="self"/>
   
   <link href="https://xzmfhome.github.io/"/>
-  <updated>2023-08-08T12:29:56.087Z</updated>
+  <updated>2023-08-10T04:44:24.230Z</updated>
   <id>https://xzmfhome.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中缀表达式</title>
+    <link href="https://xzmfhome.github.io/2023/08/10/tew2/"/>
+    <id>https://xzmfhome.github.io/2023/08/10/tew2/</id>
+    <published>2023-08-10T04:42:44.000Z</published>
+    <updated>2023-08-10T04:44:24.230Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+
+#include &amp;lt;cstring&amp;gt;
+
+#include &amp;lt;cmath&amp;gt;
+
+const int N = 66;
+
+char s[N], stkc[N];
+
+int</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>windows9</title>

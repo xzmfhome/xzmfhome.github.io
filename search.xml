@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>中缀表达式</title>
+      <link href="/2023/08/10/tew2/"/>
+      <url>/2023/08/10/tew2/</url>
+      
+        <content type="html"><![CDATA[<pre><code>#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;const int N = 66;char s[N], stkc[N];int stki[N], tpi, tpc, x;inline int prev(char c) &#123;    switch(c) &#123;        case &#39;+&#39;: case &#39;-&#39;: return 1;        case &#39;*&#39;: case &#39;/&#39;: return 2;        case &#39;^&#39;: return 3;        case &#39;(&#39;: return -1;        case &#39;)&#39;: return 0;    &#125;    return 0;&#125;int main() &#123;    scanf(&quot;%s&quot;, s+1);    s[0] = &#39;(&#39;, s[strlen(s)-1] = &#39;)&#39;;    for (int i = 0; s[i]; ++i) &#123;        if ((s[i]==&#39;-&#39;&amp;&amp;s[i-1]==&#39;(&#39;) || (s[i]&gt;=&#39;0&#39;&amp;&amp;s[i]&lt;=&#39;9&#39;)) &#123;            bool neg = false;            if (s[i] == &#39;-&#39;) neg = true, ++i;            int ans = s[i++] - &#39;0&#39;;            while (s[i]&gt;=&#39;0&#39; &amp;&amp; s[i]&lt;=&#39;9&#39;)                ans = 10*ans + s[i++]-&#39;0&#39;;            if (neg) ans = -ans;            stki[++tpi] = ans;        &#125;//i此时已经不是数字，所以可以继续判断运算符        if (s[i] == &#39;(&#39;) &#123;            stkc[++tpc] = &#39;(&#39;, ++x;        &#125; else &#123;            //一个运算符前面不是数字或右括号，报错            if ((s[i-1]&lt;&#39;0&#39; || s[i-1]&gt;&#39;9&#39;) &amp;&amp; s[i-1]!=&#39;)&#39;) &#123;                puts(&quot;NO&quot;);                return 0;            &#125;            while (tpc &amp;&amp; prev(s[i])&lt;=prev(stkc[tpc])) &#123;                char op = stkc[tpc--];                int b = stki[tpi--], a = stki[tpi--];                if (op == &#39;+&#39;) a += b;                else if (op == &#39;-&#39;) a -= b;                else if (op == &#39;*&#39;) a *= b;                else if (op == &#39;/&#39;) a /= b;                else if (op == &#39;^&#39;) a = pow(a, b);                stki[++tpi] = a;            &#125;            if (s[i] == &#39;)&#39;) &#123;                //括号匹配不对，报错                if (!x) &#123; puts(&quot;NO&quot;); return 0; &#125;                --tpc, --x;                continue;            &#125;            stkc[++tpc] = s[i];        &#125;    &#125;    if (x) puts(&quot;NO&quot;);//有多余括号，报错    else printf(&quot;%d&quot;, stki[tpi]);    return 0;&#125;</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>windows9</title>
       <link href="/2023/08/08/windows9/"/>
       <url>/2023/08/08/windows9/</url>
