@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>素数筛法 | 流水源</title>
+  <meta name="keywords" content=" mfsteam ">
+  <meta name="description" content="素数筛法 | 流水源">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="#include &lt;iostream&gt;  #include &lt;cstring&gt;  #include &lt;cmath&gt;  const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中缀表达式">
+<meta property="og:url" content="https://xzmfhome.github.io/2023/08/10/tew2/index.html">
+<meta property="og:site_name" content="流水源">
+<meta property="og:description" content="#include &lt;iostream&gt;  #include &lt;cstring&gt;  #include &lt;cmath&gt;  const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-10T04:42:44.000Z">
+<meta property="article:modified_time" content="2023-08-10T04:44:24.230Z">
+<meta property="article:author" content="xzbzm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=" rel="stylesheet">
+
+<link href="/css/hl_theme/zenbum.css?v=" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=" ></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="流水源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>xzbzm</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/smf08607"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:smf08607@outlook.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=106675641&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(15)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="-飞花">
+            
+            -飞花
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="沐枫答案 一本通">
+            
+            沐枫答案 一本通
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="沐枫sun1330">
+            
+            沐枫sun1330
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="其他">
+            
+            其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="日记">
+            
+            日记
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="mfsteam">
+            
+            mfsteam
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="VM">
+            
+            VM
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="15">
+<input type="hidden" id="yelog_site_word_count" value="7.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://www.mfstem.org/">mfoj</a></li>
+            
+            <li><a target="_blank" href="https://qnlsix.github.io/">mf导航</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>答案</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日记</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>一本通</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>资料</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mfsteam</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 其他 "
+           href="/2023/07/13/%E5%A5%BD%E7%8E%A9%E7%9A%84%E8%B5%84%E6%96%99/"
+           data-tag="资料"
+           data-author="xzbzm" >
+            <span class="post-title" title="好玩的资料">好玩的资料</span>
+            <span class="post-date" title="2023-07-13 13:26:25">2023/07/13</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 日记 "
+           href="/2023/07/12/forza-horizon-4-1/"
+           data-tag="日记"
+           data-author="xzbzm" >
+            <span class="post-title" title="搭建 hexo">搭建 hexo</span>
+            <span class="post-date" title="2023-07-12 15:37:05">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2023/08/10/tew2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="中缀表达式">中缀表达式</span>
+            <span class="post-date" title="2023-08-10 12:42:44">2023/08/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2023/08/08/windows9/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="windows9">windows9</span>
+            <span class="post-date" title="2023-08-08 20:29:56">2023/08/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2023/08/06/%E6%89%93%E5%8C%85pack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="打包(pack)--官方std.cpp">打包(pack)--官方std.cpp</span>
+            <span class="post-date" title="2023-08-06 21:40:13">2023/08/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2023/07/30/minecraft/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Free Minecraft premium account upgrade https://freeminecraftgiftcode.net">Free Minecraft premium account upgrade https://freeminecraftgiftcode.net</span>
+            <span class="post-date" title="2023-07-30 13:19:41">2023/07/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 VM "
+           href="/2023/07/21/xp%E5%AF%86%E9%92%A5/"
+           data-tag=""
+           data-author="xzbzm" >
+            <span class="post-title" title="xp密钥">xp密钥</span>
+            <span class="post-date" title="2023-07-21 14:17:54">2023/07/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 VM "
+           href="/2023/07/21/xp%E7%94%B5%E8%AF%9D%E6%BF%80%E6%B4%BB/"
+           data-tag=""
+           data-author="xzbzm" >
+            <span class="post-title" title="xp电话激活">xp电话激活</span>
+            <span class="post-date" title="2023-07-21 14:17:54">2023/07/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 沐枫答案 一本通 "
+           href="/2023/07/14/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-4%E3%80%8DSherlock-and-His-Girlfriend/"
+           data-tag=""
+           data-author="小助手" >
+            <span class="post-title" title="「一本通 6.2 练习 4」Sherlock and His Girlfriend">「一本通 6.2 练习 4」Sherlock and His Girlfriend</span>
+            <span class="post-date" title="2023-07-14 15:17:25">2023/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 沐枫sun1330 "
+           href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-3%E3%80%8DGoldbach-s-Conjecture/"
+           data-tag="答案"
+           data-author="xzbzm" >
+            <span class="post-title" title="「一本通 6.2 练习 3」Goldbach&#39;s Conjecture">「一本通 6.2 练习 3」Goldbach&#39;s Conjecture</span>
+            <span class="post-date" title="2023-07-12 20:48:17">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 mfsteam "
+           href="/2023/07/12/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/"
+           data-tag="mfsteam"
+           data-author="小助手" >
+            <span class="post-title" title="素数筛法">素数筛法</span>
+            <span class="post-date" title="2023-07-12 15:21:15">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 沐枫答案 一本通 "
+           href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-2-%E7%BB%83%E4%B9%A0-1%E3%80%8D%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/"
+           data-tag="一本通"
+           data-author="小助手" >
+            <span class="post-title" title="「一本通 6.2 练习 1」质因数分解">「一本通 6.2 练习 1」质因数分解</span>
+            <span class="post-date" title="2023-07-12 15:07:16">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 沐枫sun1330 "
+           href="/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/"
+           data-tag=""
+           data-author="小助手" >
+            <span class="post-title" title="快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数">快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数</span>
+            <span class="post-date" title="2023-07-12 13:58:08">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 -飞花 "
+           href="/2023/07/12/%E5%85%A5%E9%97%A8-%E6%90%9C%E7%B4%A2%E3%80%81%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="入门-搜索、贪心和动态规划的区别与联系">入门-搜索、贪心和动态规划的区别与联系</span>
+            <span class="post-date" title="2023-07-12 12:22:21">2023/07/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 沐枫答案 一本通 "
+           href="/2023/07/12/%E3%80%8C%E4%B8%80%E6%9C%AC%E9%80%9A-6-1-%E4%BE%8B-1%E3%80%8D%E5%BA%8F%E5%88%97%E7%9A%84%E7%AC%AC-k-%E4%B8%AA%E6%95%B0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="「一本通 6.1 例 1」序列的第 k 个数">「一本通 6.1 例 1」序列的第 k 个数</span>
+            <span class="post-date" title="2023-07-12 11:24:49">2023/07/12</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-素数筛法" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">素数筛法</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>小助手</a></span>
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="mfsteam">mfsteam</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">mfsteam</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-07-14 21:48:44'>2023-07-12 15:21</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:478</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA-1e5-7-%E4%BB%A5%E5%86%85%E7%9A%84%E6%89%80%E6%9C%89%E7%B4%A0%E6%95%B0"><span class="toc-text">输出 1e5+7 以内的所有素数</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="输出-1e5-7-以内的所有素数"><a href="#输出-1e5-7-以内的所有素数" class="headerlink" title="输出 1e5+7 以内的所有素数"></a>输出 1e5+7 以内的所有素数</h2><pre><code>#include &lt;iostream&gt;
+#include &lt;ctime&gt;
+using namespace std;
+const int N = 1e5 + 7;
+bool isP(int x) &#123;
+    if (x&lt;2 || (x&gt;2 &amp;&amp; x%2==0)) return false;
+    for (int i = 3; i*i &lt;= x; i += 2)
+        if (x % i == 0) return false;
+    return true;
+&#125;
+int main() &#123;
+    clock_t start, end;
+    start = clock();
+    for (int i = 2; i &lt; N; ++i)
+        if (isP(i)) printf(&quot;%d &quot;, i);
+    end = clock();
+    printf(&quot;time: %d\n&quot;, end-start);
+&#125;
+</code></pre>
+<p>埃氏筛</p>
+<hr>
+<p>除了能够检验给定整数 𝑥 是否为素数的函数之外，如果能够事先准备好素数表就可以帮助我们更有效地求解素数的相关问题。埃拉托色尼筛选法（Sieve of Eratosthenes）可以快速列举出给定范围内的所有素数。</p>
+<p><img src="https://www.mfstem.org/file/2/%E5%9F%83%E6%B0%8F%E7%AD%9B.gif"></p>
+<pre><code>
+
+ #include &lt;iostream&gt;
+    #include &lt;ctime&gt;
+    using namespace std;
+    const int N = 1e5 + 7;
+    int pr[N/5], ct;
+    bool isP[N];// true表示不是素数
+    int main() &#123;
+        clock_t start, end;
+        start = clock();
+        isP[1] = true;
+        for (int i = 2; i &lt; N; ++i) &#123;
+            if (isP[i]) continue;
+            pr[++ct] = i;
+            for (int j = i+i; j &lt; N; j += i)
+                isP[j] = true;
+        &#125;
+        end = clock();
+        printf(&quot;time: %d\n&quot;, end-start);
+    &#125;
+</code></pre>
+<p>欧拉筛(线性筛)</p>
+<hr>
+<p>埃氏筛有一个缺点，每个数会被筛多次。</p>
+<p>可以考虑将每个数都只用它最小的质因数筛掉，例如：8 被 2×4 筛掉，27 被 3×9 筛掉，……。</p>
+<p>由此我们设计出欧拉筛的算法：<strong>用每个数 x（不论是否是素数）从最小的质数开始逐一相乘，将乘积得数筛去，直到该素数为 x 的最小质因数为止。</strong></p>
+<pre><code>#include &lt;iostream&gt; 
+#include &lt;ctime&gt; 
+using namespace std; 
+const int N = 1e5 + 7;
+ int pr[N/5], ct; 
+isP[N];// true表示不是素数 
+int main() &#123; clock_t start, end; start = clock(); isP[1] = true; for (int i = 2; i &lt; N; ++i) &#123; if (!isP[i]) pr[++ct] = i; for (int j = 1; j&lt;=ct &amp;&amp; 1LL*pr[j]*i&lt;N; ++j) &#123; isP[pr[j]*i] = true; if (i%pr[j] == 0) break; &#125; &#125; end = clock(); printf(&quot;time: %d\n&quot;, end-start); &#125;
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 smf08607@outlook.com </span>
+    </div>
+</article>
+
+
+
+
+
+    <div id="comments">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81ODcwMy8zNTE2NQ==">
+        <script type="text/javascript">
+			(function(d, s) {
+				var j, e = d.getElementsByTagName(s)[0];
+
+				if (typeof LivereTower === 'function') { return; }
+
+				j = d.createElement(s);
+				window.livereOptions = {
+					eagerLoading: true,
+					scrollEventTargetSelector: '#post'
+                }
+				j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+				j.async = true;
+				e.parentNode.insertBefore(j, e);
+			})(document, 'script');
+        </script>
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2023 xzbzm
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=" ></script>
+
+<script src="/js/script.js?v=" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
