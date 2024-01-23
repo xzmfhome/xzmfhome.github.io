@@ -6,20 +6,20 @@
   <meta name="keywords" content="">
   <meta name="description" content="入门-搜索、贪心和动态规划的区别与联系 | 流水源">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="#include &lt;iostream&gt;  #include &lt;cstring&gt;  #include &lt;cmath&gt;  const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;">
+<meta name="description" content="#include   #include   #include   const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;          case &#39;+&#39;: case &#39;-&#39;: return 1;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="中缀表达式">
 <meta property="og:url" content="https://xzmfhome.github.io/2023/08/10/tew2/index.html">
 <meta property="og:site_name" content="流水源">
-<meta property="og:description" content="#include &lt;iostream&gt;  #include &lt;cstring&gt;  #include &lt;cmath&gt;  const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;">
+<meta property="og:description" content="#include   #include   #include   const int N &#x3D; 66;  char s[N], stkc[N];  int stki[N], tpi, tpc, x;  inline int prev(char c) &amp;#123;      switch(c) &amp;#123;          case &#39;+&#39;: case &#39;-&#39;: return 1;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-10T04:42:44.000Z">
-<meta property="article:modified_time" content="2023-08-10T04:44:24.230Z">
+<meta property="article:modified_time" content="2024-01-23T12:55:33.502Z">
 <meta property="article:author" content="xzbzm">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="icon" href="/img/lsy.jpg">
+<link rel="icon" href="https://hydro.ac/d/c2023start332/file/18954/lsy.png">
 
 <link href="/css/style.css?v=" rel="stylesheet">
 
@@ -41,8 +41,8 @@
 
 <script src="/js/iconfont.js?v=" ></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"><link rel="alternate" href="/atom.xml" title="流水源" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="流水源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="">
@@ -60,7 +60,7 @@
         <a href="/"
    class="avatar_target">
     <img class="avatar"
-         src="/img/lsy-2.png"/>
+         src="https://hydro.ac/d/c2023start332/file/18954/lsy-2.png"/>
 </a>
 <div class="author">
     <span>xzbzm</span>
@@ -242,7 +242,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="14">
-<input type="hidden" id="yelog_site_word_count" value="3.6k">
+<input type="hidden" id="yelog_site_word_count" value="3.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -347,7 +347,7 @@
         <a  class="全部文章 "
            href="/2023/08/06/%E6%89%93%E5%8C%85pack/"
            data-tag=""
-           data-author="" >
+           data-author="xzbzm" >
             <span class="post-title" title="打包(pack)--官方std.cpp">打包(pack)--官方std.cpp</span>
             <span class="post-date" title="2023-08-06 21:40:13">2023/08/06</span>
         </a>
@@ -419,7 +419,7 @@
         <a  class="全部文章 沐枫sun1330 "
            href="/2023/07/12/%E5%BF%AB%E9%80%9F%E5%B9%82/"
            data-tag=""
-           data-author="小助手" >
+           data-author="xzbzm" >
             <span class="post-title" title="快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数">快速幂-一本通「一本通 6.1 例 1」序列的第 k 个数</span>
             <span class="post-date" title="2023-07-12 13:58:08">2023/07/12</span>
         </a>
@@ -480,7 +480,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-07-12 12:26:02'>2023-07-12 12:22</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 20:56:19'>2023-07-12 12:22</time>
         
     </div>
     <div class="article-meta">
@@ -504,7 +504,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E4%B8%80%E7%B1%BB%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%88%92%E5%88%86%E5%87%BA%E5%A4%9A%E4%B8%AA%E9%98%B6%E6%AE%B5%E5%AE%8C%E6%88%90%EF%BC%8C%E6%AF%8F%E4%B8%AA%E9%98%B6%E6%AE%B5%E5%8F%88%E5%8F%AF%E4%BB%A5%E5%88%86%E5%87%BA%E5%A4%9A%E7%A7%8D%E4%B8%8D%E5%90%8C%E7%9A%84%E7%8A%B6%E6%80%81%EF%BC%88%E9%98%B6%E6%AE%B5%E4%B8%8E%E7%8A%B6%E6%80%81%E5%88%92%E5%88%86%EF%BC%89%E3%80%82%E6%90%9C%E7%B4%A2%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%BF%87%E5%A4%A7"><span class="toc-text">有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88Dynamic-Programming%EF%BC%8C%E7%AE%80%E7%A7%B0-DP%EF%BC%89%E5%B0%B1%E6%98%AF%E8%A7%A3%E5%86%B3%E8%BF%99%E7%B1%BB%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%80%E4%BD%B3%E9%80%89%E6%8B%A9%E3%80%82%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88DP%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">贪心和动态规划（Dynamic Programming，简称 DP）就是解决这类问题的最佳选择。贪心和动态规划（DP）的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%A0%E6%AD%A4%EF%BC%8C%E6%88%91%E4%BB%AC%E8%AF%B4%E8%B4%AA%E5%BF%83%E5%92%8CDP%E9%83%BD%E6%98%AF%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%E5%8C%85%E5%90%AB%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E4%BD%86%E5%AE%83%E4%BB%AC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E4%BA%8E%EF%BC%8C%E8%B4%AA%E5%BF%83%E6%98%AF%E9%98%B6%E6%AE%B5%E6%9C%80%E4%BC%98%E8%A7%A3%E7%9B%B4%E6%8E%A5%E5%AF%BC%E8%87%B4%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E8%80%8CDP%E6%98%AF%E6%AF%8F%E4%B8%AA%E9%98%B6%E6%AE%B5%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E7%8A%B6%E6%80%81%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E5%AF%BC%E8%87%B4%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E5%AE%83%E6%98%AF%E6%AF%94%E8%B4%AA%E5%BF%83%E6%9B%B4%E7%BB%86%E7%B2%92%E5%BA%A6%E7%9A%84%E9%80%92%E6%8E%A8%EF%BC%8C%E7%BB%86%E5%8C%96%E5%88%B0%E4%BA%86%E7%8A%B6%E6%80%81%E7%9A%84%E5%B1%82%E9%9D%A2%E3%80%82%E6%89%80%E4%BB%A5%EF%BC%8C%E6%88%91%E4%BB%AC%E5%A6%82%E6%9E%9C%E9%80%9A%E8%BF%87%E5%88%86%E6%9E%90%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98%E6%98%AF%E5%8F%AF%E4%BB%A5%E5%88%92%E5%88%86%E9%98%B6%E6%AE%B5%E7%9A%84%EF%BC%8C%E6%97%A0%E5%90%8E%E6%95%88%E6%80%A7%E7%9A%84%EF%BC%8C%E4%B8%94%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E7%94%A8%E9%98%B6%E6%AE%B5%E6%9C%80%E4%BC%98%E8%A7%A3%E5%AF%BC%E5%87%BA%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%E7%9A%84%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9DP%E6%9D%A5%E5%AE%8C%E6%88%90%E3%80%82"><span class="toc-text">因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DP-%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-text">DP 的步骤</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0%E5%9C%A8%E4%BA%8E%E4%BB%8E-13-%E5%BE%80%E4%B8%8B%EF%BC%8C%E8%99%BD%E7%84%B6%E8%B5%B0-8-%E4%B8%8D%E6%98%AF%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E5%8D%B4%E5%9C%A8%E5%90%8E%E9%9D%A2%E9%98%B6%E6%AE%B5%E9%80%90%E6%AD%A5%E5%A2%9E%E5%A4%A7%EF%BC%8C%E6%9C%80%E7%BB%88%E6%88%90%E4%B8%BA%E4%BA%86%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%E3%80%82%E5%9B%A0%E6%AD%A4%EF%BC%8C%E6%88%91%E4%BB%AC%E8%AF%B4%E8%B4%AA%E5%BF%83%E5%92%8CDP%E9%83%BD%E6%98%AF%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%E5%8C%85%E5%90%AB%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E4%BD%86%E5%AE%83%E4%BB%AC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%9C%A8%E4%BA%8E%EF%BC%8C%E8%B4%AA%E5%BF%83%E6%98%AF%E9%98%B6%E6%AE%B5%E6%9C%80%E4%BC%98%E8%A7%A3%E7%9B%B4%E6%8E%A5%E5%AF%BC%E8%87%B4%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E8%80%8CDP%E6%98%AF%E6%AF%8F%E4%B8%AA%E9%98%B6%E6%AE%B5%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E7%8A%B6%E6%80%81%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E5%AF%BC%E8%87%B4%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%EF%BC%8C%E5%AE%83%E6%98%AF%E6%AF%94%E8%B4%AA%E5%BF%83%E6%9B%B4%E7%BB%86%E7%B2%92%E5%BA%A6%E7%9A%84%E9%80%92%E6%8E%A8%EF%BC%8C%E7%BB%86%E5%8C%96%E5%88%B0%E4%BA%86%E7%8A%B6%E6%80%81%E7%9A%84%E5%B1%82%E9%9D%A2%E3%80%82%E6%89%80%E4%BB%A5%EF%BC%8C%E6%88%91%E4%BB%AC%E5%A6%82%E6%9E%9C%E9%80%9A%E8%BF%87%E5%88%86%E6%9E%90%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98%E6%98%AF%E5%8F%AF%E4%BB%A5%E5%88%92%E5%88%86%E9%98%B6%E6%AE%B5%E7%9A%84%EF%BC%8C%E6%97%A0%E5%90%8E%E6%95%88%E6%80%A7%E7%9A%84%EF%BC%8C%E4%B8%94%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E7%94%A8%E9%98%B6%E6%AE%B5%E6%9C%80%E4%BC%98%E8%A7%A3%E5%AF%BC%E5%87%BA%E5%85%A8%E5%B1%80%E6%9C%80%E4%BC%98%E8%A7%A3%E7%9A%84%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9DP%E6%9D%A5%E5%AE%8C%E6%88%90%E3%80%82"><span class="toc-text">原因在于从 $13$ 往下，虽然走 $8$ 不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DP-%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-text">DP 的步骤</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -520,16 +520,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大"><a href="#有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大" class="headerlink" title="有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（阶段与状态划分）。搜索的时间复杂度过大"></a>有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（<strong>阶段与状态划分</strong>）。<br>搜索的时间复杂度过大</h2><p>这类问题当然可以用搜索进行暴力枚举，但是时间复杂度很高，通常是指数级的，无法接受。仔细分析后，我们如果能得出如下结论：</p>
+        <p>有一类问题，可以划分出多个阶段完成，每个阶段又可以分出多种不同的状态（<strong>阶段与状态划分</strong>）。<br>搜索的时间复杂度过大。</p>
+<hr>
+<p>这类问题当然可以用搜索进行暴力枚举，但是时间复杂度很高，通常是指数级的，无法接受。仔细分析后，我们如果能得出如下结论：</p>
 <p>每一阶段需要做出的决策，只取决于之前阶段的情况，与之后阶段的情况无关（<strong>无后效性原则</strong>）。</p>
 <p>那么我们就应该利用这样的性质进行有效剪枝，尽早去掉不需要的子问题集合（即提前判断出一些不可能得出最优解的集合，将它们直接跳过），只保留能够产生最优解的子问题集合，从而大大提高算法效率。</p>
-<h2 id="贪心和动态规划（Dynamic-Programming，简称-DP）就是解决这类问题的最佳选择。贪心和动态规划（DP）的区别"><a href="#贪心和动态规划（Dynamic-Programming，简称-DP）就是解决这类问题的最佳选择。贪心和动态规划（DP）的区别" class="headerlink" title="贪心和动态规划（Dynamic Programming，简称 DP）就是解决这类问题的最佳选择。贪心和动态规划（DP）的区别"></a>贪心和动态规划（Dynamic Programming，简称 DP）就是解决这类问题的最佳选择。<br>贪心和动态规划（DP）的区别</h2><p>贪心是一种通过每一个阶段的最优解就可推出全局最优解的算法，其中每阶段的最优解即为该阶段所有状态的最优解。因此，贪心在每个阶段只需保留一个数（最优解），通常一层循环把所有阶段跑一遍即可。</p>
+<p>贪心和动态规划（Dynamic Programming，简称 DP）就是解决这类问题的最佳选择。<br>贪心和动态规划（DP）的区别</p>
+<hr>
+<p>贪心是一种通过每一个阶段的最优解就可推出全局最优解的算法，其中每阶段的最优解即为该阶段所有状态的最优解。因此，贪心在每个阶段只需保留一个数（最优解），通常一层循环把所有阶段跑一遍即可。</p>
 <p>例如：给定一个 $m\times n$ 的矩阵，从每一行选取一个值，使得总和最大。我们直接采用贪心的思路，将原问题划分为 $m$ 个阶段（每一行为一个阶段），每个阶段的最优解（每一行的最大值）累加到一起，就直接可以导出全局最优解。</p>
 <p>但不是所有问题都可以用贪心来解决，例如“<a target="_blank" rel="noopener" href="https://www.mfstem.org/p/545">数字金字塔</a>”，如果按照贪心算法，则只会选择出一条路线：$13\rightarrow 11\rightarrow 12\rightarrow 14\rightarrow 13$，结果为 $63$，而答案应该为：$13\rightarrow 8\rightarrow 26\rightarrow 15\rightarrow 24$，得到 $86$。</p>
 <p><img src="https://www.feihua.life/2023/06/02/%E5%85%A5%E9%97%A8-%E6%90%9C%E7%B4%A2%E3%80%81%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/%E6%95%B0%E5%AD%97%E9%87%91%E5%AD%97%E5%A1%94.png" alt="数字金字塔"></p>
 <p>数字金字塔</p>
-<p>原因在于从 $13$ 往下，虽然走 $8$ 不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。</p>
-<h2 id="因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。"><a href="#因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。" class="headerlink" title="因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。"></a>因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。</h2><h2 id="DP-的步骤"><a href="#DP-的步骤" class="headerlink" title="DP 的步骤"></a>DP 的步骤</h2><p>DP类题目的设计步骤通常为：</p>
+<h2 id="原因在于从-13-往下，虽然走-8-不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。"><a href="#原因在于从-13-往下，虽然走-8-不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。" class="headerlink" title="原因在于从 $13$ 往下，虽然走 $8$ 不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。"></a>原因在于从 $13$ 往下，虽然走 $8$ 不是第一阶段的最优解，却在后面阶段逐步增大，最终成为了全局最优解。<br>因此，我们说贪心和DP都是全局最优解包含局部最优解，但它们的区别在于，贪心是阶段最优解直接导致全局最优解，而DP是每个阶段中的每个状态的最优解，导致全局最优解，它是比贪心更细粒度的递推，细化到了状态的层面。所以，我们如果通过分析，发现问题是可以划分阶段的，无后效性的，且不能直接用阶段最优解导出全局最优解的，就可以选择DP来完成。</h2><h2 id="DP-的步骤"><a href="#DP-的步骤" class="headerlink" title="DP 的步骤"></a>DP 的步骤</h2><p>DP类题目的设计步骤通常为：</p>
 <ol>
 <li><p>划分阶段</p>
 </li>
